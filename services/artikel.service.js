@@ -2,12 +2,11 @@ const { prisma } = require('../config/prisma');
 
 async function getAllArticle() {
     try {
-      const books = await prisma.artikel.findMany();
-  
-      return books;
+      const Artikel = await prisma.artikel.findMany();
+      return Artikel;
+
     } catch (error) {
       console.error(error);
-  
       throw new Error()
     }
   }
